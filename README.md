@@ -31,15 +31,15 @@ Create a new feature called FamilySize that is sum of SibSp and Parch
 
 |   FamilySize|  Survived|
 |---|---|
-|0           |1|  0.303538|
-|1           |2|  0.552795|
-|2           |3 | 0.578431|
-|3           |4  |0.724138|
-|4           |5  |0.200000|
-|5           |6  |0.136364|
-|6          |7  |0.333333|
-|7          |8  |0.000000|
-|8          |11  |0.000000|
+          |1|  0.303538|
+           |2|  0.552795|
+           |3 | 0.578431|
+           |4  |0.724138|
+           |5  |0.200000|
+           |6  |0.136364|
+          |7  |0.333333|
+          |8  |0.000000|
+          |11  |0.000000|
 
 
 The size of the family seems to have an impact on the survival rates. From this I can create a further feature that I'll call 'IsAlone' that will be 1 if the passenger was alone on the ship and 0 otherwise.
