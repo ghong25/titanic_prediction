@@ -46,12 +46,12 @@ The size of the family seems to have an impact on the survival rates. From this 
 
 Next, fill in any missing observations for 'Fare' with the median fare, then divide the category up into 5 different buckets for later analysis.
 
-|---|   CategoricalFare|  Survived|
+|   CategoricalFare|  Survived|
 |---|---|
-|   |(0, 7.91]  |0.197309|
-|   |(7.91, 14.454]  |0.303571|
-|   |(14.454, 31.0]  |0.454955|
-|  |(31.0, 512.329]  |0.581081|
+|(0, 7.91]  |0.197309|
+|(7.91, 14.454]  |0.303571|
+|(14.454, 31.0]  |0.454955|
+|(31.0, 512.329]  |0.581081|
 
 There seems to be a pretty clear connection between fare price and survival rate. Passengers who paid more have much high survival rates.
 
@@ -69,7 +69,7 @@ Survival is a lot higher for children than for other groups, and the elderly hav
 
 While the names themselves probably won't tell us much, perhaps we can extract the titles from the names which might help
 
-|---|female|  male|
+|   |female|  male|
 |---|---|---|
 |Capt           |0|     1|
 |Col            |0|     2|
