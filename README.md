@@ -71,8 +71,6 @@ While the names themselves probably won't tell us much, perhaps we can extract t
 
 |       |female|  male|
 |---|---|
-|Title|	|
-|---|---|
 |Capt           |0|     1|
 |Col            |0|     2|
 |Countess       |1|     0|
