@@ -29,62 +29,67 @@ Before beginning the analysis, first try to understand the data. There are 12 co
 
 Create a new feature called FamilySize that is sum of SibSp and Parch
 
-   FamilySize  Survived
-0           1  0.303538
-1           2  0.552795
-2           3  0.578431
-3           4  0.724138
-4           5  0.200000
-5           6  0.136364
-6           7  0.333333
-7           8  0.000000
-8          11  0.000000
+|   FamilySize|  Survived|
+|---|---|
+|0           |1|  0.303538|
+|1           |2|  0.552795|
+|2           |3 | 0.578431|
+|3           |4  |0.724138|
+|4           |5  |0.200000|
+|5           |6  |0.136364|
+|6          |7  |0.333333|
+|7          |8  |0.000000|
+|8          |11  |0.000000|
 
 
 The size of the family seems to have an impact on the survival rates. From this I can create a further feature that I'll call 'IsAlone' that will be 1 if the passenger was alone on the ship and 0 otherwise.
 
 Next, fill in any missing observations for 'Fare' with the median fare, then divide the category up into 5 different buckets for later analysis.
 
-   CategoricalFare  Survived
-0   (-0.001, 7.91]  0.197309
-1   (7.91, 14.454]  0.303571
-2   (14.454, 31.0]  0.454955
-3  (31.0, 512.329]  0.581081
+|   CategoricalFare|  Survived|
+|---|---|
+|0   |(-0.001, 7.91]  |0.197309|
+|1   |(7.91, 14.454]  |0.303571|
+|2   |(14.454, 31.0]  |0.454955|
+|3  |(31.0, 512.329]  |0.581081|
 
 There seems to be a pretty clear connection between fare price and survival rate. Passengers who paid more have much high survival rates.
 
 Since there are many missing values for Age, fill in the missing values by generating random numbers that are within a standard deviation of the mean. Then categorize age into 5 buckets
 
-  CategoricalAge  Survived
-0  (-0.08, 16.0]  0.512605
-1   (16.0, 32.0]  0.359551
-2   (32.0, 48.0]  0.364372
-3   (48.0, 64.0]  0.434783
-4   (64.0, 80.0]  0.090909
+|  CategoricalAge|  Survived|
+|---|---|
+|0  (-0.08, 16.0]|  0.512605|
+|1   (16.0, 32.0]|  0.359551|
+|2   (32.0, 48.0]|  0.364372|
+|3   (48.0, 64.0]|  0.434783|
+|4   (64.0, 80.0]|  0.090909|
 
 Survival is a lot higher for children than for other groups, and the elderly have by far the lowest survival rates
 
 While the names themselves probably won't tell us much, perhaps we can extract the titles from the names which might help
 
-Sex       female  male
-Title
-Capt           0     1
-Col            0     2
-Countess       1     0
-Don            0     1
-Dr             1     6
-Jonkheer       0     1
-Lady           1     0
-Major          0     2
-Master         0    40
-Miss         182     0
-Mlle           2     0
-Mme            1     0
-Mr             0   517
-Mrs          125     0
-Ms             1     0
-Rev            0     6
-Sir            0     1
+|       |female|  male|
+|---|---|
+|Title|	|
+|---|---|
+|Capt           |0|     1|
+|Col            |0|     2|
+|Countess       |1|     0|
+|Don            |0|     1|
+|Dr             |1|     6|
+|Jonkheer       |0|     1|
+|Lady           |1|     0|
+|Major          |0|     2|
+|Master         |0|    40|
+|Miss         |182|     0|
+|Mlle           |2|     0|
+|Mme            |1|     0|
+|Mr             |0|   517|
+|Mrs          |125|     0|
+|Ms             |1|     0|
+|Rev            |0|     6|
+|Sir            |0|     1|
 
 Now try to categorize these. Mlle is an abbreviation for Mademoiselle so should be grouped in with Miss. Mme is an abbreviation for Madame so should be grouped in with Mrs. Then create a broader category of high status titles, like Countess, Don, Dr, Jonkheer, etc. Then anything that is either not common (like Mr. or Mrs.) or doesn't fit into these groupings should go into a misc category (like Rev or Major)
 
