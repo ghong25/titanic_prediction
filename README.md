@@ -46,12 +46,12 @@ The size of the family seems to have an impact on the survival rates. From this 
 
 Next, fill in any missing observations for 'Fare' with the median fare, then divide the category up into 5 different buckets for later analysis.
 
-|   CategoricalFare|  Survived|
+|---|   CategoricalFare|  Survived|
 |---|---|
-|0   |(-0.001, 7.91]  |0.197309|
-|1   |(7.91, 14.454]  |0.303571|
-|2   |(14.454, 31.0]  |0.454955|
-|3  |(31.0, 512.329]  |0.581081|
+|   |(0, 7.91]  |0.197309|
+|   |(7.91, 14.454]  |0.303571|
+|   |(14.454, 31.0]  |0.454955|
+|  |(31.0, 512.329]  |0.581081|
 
 There seems to be a pretty clear connection between fare price and survival rate. Passengers who paid more have much high survival rates.
 
@@ -59,18 +59,18 @@ Since there are many missing values for Age, fill in the missing values by gener
 
 |  CategoricalAge|  Survived|
 |---|---|
-|0  (-0.08, 16.0]|  0.512605|
-|1   (16.0, 32.0]|  0.359551|
-|2   (32.0, 48.0]|  0.364372|
-|3   (48.0, 64.0]|  0.434783|
-|4   (64.0, 80.0]|  0.090909|
+|  (-0.08, 16.0]|  0.512605|
+|   (16.0, 32.0]|  0.359551|
+|   (32.0, 48.0]|  0.364372|
+|   (48.0, 64.0]|  0.434783|
+|   (64.0, 80.0]|  0.090909|
 
 Survival is a lot higher for children than for other groups, and the elderly have by far the lowest survival rates
 
 While the names themselves probably won't tell us much, perhaps we can extract the titles from the names which might help
 
-|       |female|  male|
-|---|---|
+|---|female|  male|
+|---|---|---|
 |Capt           |0|     1|
 |Col            |0|     2|
 |Countess       |1|     0|
